@@ -1,0 +1,8 @@
+npx hardhat node
+npx hardhat ignition deploy ./ignition/modules/Deploy.ts --network localhost
+copy addresses in .env file
+run backend ---- .\venv\Scripts\activate --- python run.py
+connect the acount in metamask by using unique key
+run simulator.py --- python simulator.py
+run frontend
+connect wallet

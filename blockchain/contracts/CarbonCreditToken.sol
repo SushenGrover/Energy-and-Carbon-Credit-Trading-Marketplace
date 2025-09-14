@@ -1,0 +1,25 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+/**
+ * @title CarbonCreditToken
+ * @dev An ERC20 token representing carbon credits.
+ * The contract owner (our backend) can mint new tokens.
+ */
+contract CarbonCreditToken is ERC20, Ownable {
+    /**
+     * @dev Sets the token's name, symbol, and initial owner.
+     */
+    constructor(address initialOwner) ERC20("Carbon Credit Token", "CCT") Ownable(initialOwner) {}
+
+    /**
+     * @dev Creates `amount` new tokens for the `to` address.
+     * Can only be called by the contract owner.
+     */
+    function mint(address to, uint256 amount) public onlyOwner {
+        _mint(to, amount);
+    }
+}
