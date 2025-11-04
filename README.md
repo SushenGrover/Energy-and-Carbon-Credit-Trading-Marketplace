@@ -96,11 +96,11 @@ Below are some screenshots of the **EnergySim Marketplace** in action:
 
 | Description | Screenshot |
 |--------------|-------------|
-| 🏠 **Homepage / Wallet Connection** | <img src="assets/screenshots/homepage.png" width="600"/> |
-| 📊 **Dashboard Showing Token Balances** | <img src="assets/screenshots/dashboard.png" width="600"/> |
-| 💰 **Selling Tokens (SellForm)** | <img src="assets/screenshots/sellform.png" width="600"/> |
-| 🛒 **Active Marketplace Listings** | <img src="assets/screenshots/marketplace.png" width="600"/> |
-| 🔄 **Transaction Confirmation (MetaMask)** | <img src="assets/screenshots/metamask.png" width="600"/> |
+| 🏠 **Homepage / Wallet Connection** | <img src="documentation files/screenshots/home.png" width="600"/> |
+| 📊 **Dashboard Showing Token Balances** | <img src="documentation files/screenshots/connected_account.png" width="600"/> |
+| 💰 **Selling Tokens (SellForm)** | <img src="documentation files/screenshots/sell_form.png" width="600"/> |
+| 🛒 **Active Marketplace Listings** | <img src="documentation files/screenshots/sale.png" width="600"/> |
+| 🔄 **Transaction Confirmation (MetaMask)** | <img src="documentation files/screenshots/transaction_metamask.png" width="600"/> |
 
 ---
 
