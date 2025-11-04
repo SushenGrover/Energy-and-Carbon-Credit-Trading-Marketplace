@@ -116,3 +116,17 @@ function executeSale(uint256 _saleId) external payable {
 |----------|----------|------|
 |**Sushen Grover**|23BCE1728|Blockchain Developer, Backend Integration|
 |**Advit Bhutani**|23BCE1883|Frontend Developer, Smart Contract Interaction|
+
+---
+
+## 🏁 Conclusion
+
+EnergySim Marketplace demonstrates how blockchain can decentralize the energy sector — ensuring fairness, transparency, and sustainability.
+It provides a complete, working prototype for tokenized energy trading and green energy rewards — a step toward a decentralized clean energy future.
+
+---
+
+🧾 **Course Code**: BCSE324L
+🕓 **Date**: 04/11/2025
+🧑‍🏫 **Submitted To**: Dr. Anubha Pearline S
+📍 **Institution**: VIT Chennai
