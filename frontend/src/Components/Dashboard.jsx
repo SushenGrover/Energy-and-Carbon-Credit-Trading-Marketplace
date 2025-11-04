@@ -12,7 +12,17 @@ const Dashboard = ({ signer, account }) => {
 
   useEffect(() => {
     const fetchBalances = async () => {
+      console.log("Connected network:", await signer.provider.getNetwork());
+      console.log("Account:", account);
+      console.log("ETKN contract address:", energyTokenContract.address);
+      console.log("CCT contract address:", carbonCreditTokenContract.address);
+      console.log(
+        "ETKN ABI contains balanceOf:",
+        energyTokenContract.abi.some((f) => f.name === "balanceOf")
+      );
+
       if (signer && account) {
+        setIsLoading(true); // Ensure loading is true at the start
         try {
           // Create ethers contract instances
           const etknContract = new ethers.Contract(
@@ -26,28 +36,52 @@ const Dashboard = ({ signer, account }) => {
             signer
           );
 
-          // Fetch balances for the connected account
+          // DEBUG: Log before calling balanceOf
+          console.log(`Fetching ETKN balance for ${account}...`);
           const etknBal = await etknContract.balanceOf(account);
+          // DEBUG: Log the raw balance received
+          console.log("Raw ETKN Balance:", etknBal.toString()); // Use .toString() for BigInt
+
+          // DEBUG: Log before calling balanceOf
+          console.log(`Fetching CCT balance for ${account}...`);
           const cctBal = await cctContract.balanceOf(account);
+          // DEBUG: Log the raw balance received
+          console.log("Raw CCT Balance:", cctBal.toString()); // Use .toString() for BigInt
 
           // Format the raw balance (which has 18 decimals) into a readable string
-          setEtknBalance(ethers.formatUnits(etknBal, 18));
-          setCctBalance(ethers.formatUnits(cctBal, 18));
+          const formattedEtkn = ethers.formatUnits(etknBal, 18);
+          const formattedCct = ethers.formatUnits(cctBal, 18);
+
+          // DEBUG: Log the formatted balances
+          console.log("Formatted ETKN:", formattedEtkn);
+          console.log("Formatted CCT:", formattedCct);
+
+          setEtknBalance(formattedEtkn);
+          setCctBalance(formattedCct);
         } catch (error) {
           console.error("Error fetching balances:", error);
+          // DEBUG: Log the specific error
+          console.log("Error details:", error.message, error.code, error.data);
         } finally {
           setIsLoading(false);
+          console.log("Finished fetching balances."); // DEBUG: Confirm fetch cycle ends
         }
+      } else {
+        // DEBUG: Log if signer or account is missing
+        console.log("fetchBalances skipped: Signer or Account missing.");
       }
     };
 
-    fetchBalances();
+    fetchBalances(); // Initial fetch
 
     // Set up an interval to refetch balances every 10 seconds
     const interval = setInterval(fetchBalances, 10000);
 
     // Clear the interval when the component is unmounted
-    return () => clearInterval(interval);
+    return () => {
+      console.log("Clearing balance fetch interval."); // DEBUG: Log interval clear
+      clearInterval(interval);
+    };
   }, [signer, account]); // This effect re-runs if the signer or account changes
 
   return (
