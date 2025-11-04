@@ -88,23 +88,24 @@ function executeSale(uint256 _saleId) external payable {
     emit SaleCompleted(_saleId, msg.sender);
 }
 ```
+---
 ## 🧪 Results
 -✅ Real-time simulation of renewable energy token minting
 -✅ Fully functional decentralized marketplace with trustless trading
 -✅ Smooth wallet integration and live UI updates
-
+---
 ## ⚠️ Challenges Faced
 1. React (Vite + Tailwind) configuration issues
 2. Contract desynchronization after Hardhat redeployment
 3. Web3.py version incompatibility with signed transactions
-
+---
 ## 🔮 Future Enhancements
 -🌐 IoT Integration: Real smart meters instead of simulated data
 -🤖 AI-Powered Dynamic Pricing: Adjust token prices based on demand & supply
 -🪙 Carbon Credit NFTs: Transition from ERC-20 to ERC-721 for traceable credits
 -⛓️ Layer-2 Deployment: Use Polygon/Arbitrum for scalability and lower gas fees
-
-👨‍💻 Team
+---
+## 👨‍💻 Team
 |   Name   | Reg. No. | Role |
 |----------|----------|------|
 |**Sushen Grover**|23BCE1728|Blockchain Developer, Backend Integration|
