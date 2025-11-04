@@ -127,6 +127,9 @@ It provides a complete, working prototype for tokenized energy trading and green
 ---
 
 🧾 **Course Code**: BCSE324L
+
 🕓 **Date**: 04/11/2025
+
 🧑‍🏫 **Submitted To**: Dr. Anubha Pearline S
+
 📍 **Institution**: VIT Chennai
