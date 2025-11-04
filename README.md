@@ -89,6 +89,21 @@ function executeSale(uint256 _saleId) external payable {
 }
 ```
 ---
+
+## 📸 Screenshots & Demo
+
+Below are some screenshots of the **EnergySim Marketplace** in action:
+
+| Description | Screenshot |
+|--------------|-------------|
+| 🏠 **Homepage / Wallet Connection** | <img src="assets/screenshots/homepage.png" width="600"/> |
+| 📊 **Dashboard Showing Token Balances** | <img src="assets/screenshots/dashboard.png" width="600"/> |
+| 💰 **Selling Tokens (SellForm)** | <img src="assets/screenshots/sellform.png" width="600"/> |
+| 🛒 **Active Marketplace Listings** | <img src="assets/screenshots/marketplace.png" width="600"/> |
+| 🔄 **Transaction Confirmation (MetaMask)** | <img src="assets/screenshots/metamask.png" width="600"/> |
+
+---
+
 ## 🧪 Results
 - ✅ Real-time simulation of renewable energy token minting
 - ✅ Fully functional decentralized marketplace with trustless trading
